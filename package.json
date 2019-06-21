@@ -31,6 +31,6 @@
     "eslint": ">= 5"
   },
   "scripts": {
-    "lint": "eslint **/*.js"
+    "lint": "eslint '**/*.js'"
   }
 }
