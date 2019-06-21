@@ -1,8 +1,6 @@
 'use strict';
 
 module.exports = {
-  extends: './index.js',
-
   env: {
     commonjs: true
   },
@@ -10,6 +8,10 @@ module.exports = {
   parserOptions: {
     sourceType: 'script'
   },
+
+  plugins: [
+    'import'
+  ],
 
   rules: {
     'import/no-dynamic-require': 'warn',

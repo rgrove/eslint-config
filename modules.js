@@ -1,11 +1,13 @@
 'use strict';
 
 module.exports = {
-  extends: './index.js',
-
   parserOptions: {
     sourceType: 'module'
   },
+
+  plugins: [
+    'import'
+  ],
 
   rules: {
     'import/default': 'warn',

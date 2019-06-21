@@ -1,11 +1,13 @@
 'use strict';
 
 module.exports = {
-  extends: './index.js',
-
   env: {
     node: true
   },
+
+  plugins: [
+    'security'
+  ],
 
   rules: {
     'security/detect-buffer-noassert': 'warn',

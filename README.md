@@ -32,6 +32,7 @@ You can extend multiple configs using an array:
 ```js
 module.exports = {
   extends: [
+    '@rgrove/eslint-config',
     '@rgrove/eslint-config/browser',
     '@rgrove/eslint-config/modules',
     '@rgrove/eslint-config/react'
@@ -39,8 +40,8 @@ module.exports = {
 };
 ```
 
-When extending multiple configs it's not necessary to also extend the primary
-config, since the other configs all extend it themselves.
+When extending multiple configs, always extend `@rgrove/eslint-config` first,
+since it defines baseline rules that other configs may override.
 
 See [the documentation for ESLint's `extends` property](https://eslint.org/docs/user-guide/configuring#extending-configuration-files) for more details.
 
@@ -52,7 +53,7 @@ This is the base config. It defines parser options and rules that are relevant
 in all modern JS environments, and doesn't assume the use of any particular
 module system.
 
-All the other configs extend this config and build on top of it.
+When extending multiple configs, this one should always be first.
 
 ### @rgrove/eslint-config/browser
 
@@ -89,6 +90,7 @@ module.exports = {
   parser: 'babel-eslint',
 
   extends: [
+    '@rgrove/eslint-config',
     '@rgrove/eslint-config/browser',
     '@rgrove/eslint-config/modules',
     '@rgrove/eslint-config/react'
