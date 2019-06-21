@@ -13,6 +13,12 @@ module.exports = {
     'react'
   ],
 
+  settings: {
+    react: {
+      version: 'detect'
+    }
+  },
+
   rules: {
     'jsx-quotes': [ 'warn', 'prefer-double' ],
     'react/default-props-match-prop-types': 'warn',
