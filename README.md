@@ -18,21 +18,29 @@ First, install the npm module:
 npm i --save-dev @rgrove/eslint-config
 ```
 
-To use the primary config, add this to your `.eslintrc.js` (or wherever you've
-chosen to configure ESLint):
+To use the primary config, add an `extends` property to your `.eslintrc.js` (or
+wherever you've chosen to configure ESLint), like this:
 
 ```js
-extends: '@rgrove/eslint-config',
+module.exports = {
+  extends: '@rgrove/eslint-config'
+};
 ```
 
 You can extend multiple configs using an array:
 
 ```js
-extends: [
-  '@rgrove/eslint-config/browser',
-  '@rgrove/eslint-config/react'
-],
+module.exports = {
+  extends: [
+    '@rgrove/eslint-config/browser',
+    '@rgrove/eslint-config/modules',
+    '@rgrove/eslint-config/react'
+  ]
+};
 ```
+
+When extending multiple configs it's not necessary to also extend the primary
+config, since the other configs all extend it themselves.
 
 See [the documentation for ESLint's `extends` property](https://eslint.org/docs/user-guide/configuring#extending-configuration-files) for more details.
 
@@ -65,3 +73,28 @@ Defines parser options and rules specific to modern Node.js.
 ### @rgrove/eslint-config/react
 
 Defines parser options and rules specific to React.
+
+## Using an alternative parser
+
+These configs use ESLint's default parser. If you're using (for example) Babel
+to transpile language features that aren't yet part of the ECMAScript standard,
+ESLint may not be able to parse them, and you may see parsing errors when you
+run ESLint.
+
+To fix this, you may need to specify an alternative parser such as
+[babel-eslint](https://github.com/babel/babel-eslint) in your ESLint config:
+
+```js
+module.exports = {
+  parser: 'babel-eslint',
+
+  extends: [
+    '@rgrove/eslint-config/browser',
+    '@rgrove/eslint-config/modules',
+    '@rgrove/eslint-config/react'
+  ]
+};
+```
+
+You'll need to install and properly configure babel-eslint (or whatever
+alternative parser you use) as a dependency of your own project.
