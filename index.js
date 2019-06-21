@@ -78,7 +78,7 @@ module.exports = {
     // These rules loosely enforce some basic style. I try not to be too
     // prescriptive here, but these are things I care about because they help
     // reduce mistakes, improve consistency, and reduce the noisiness of diffs.
-    'brace-style': [ 'warn', "1tbs", { "allowSingleLine": true } ],
+    'brace-style': [ 'warn', '1tbs', { allowSingleLine: true } ],
     'eol-last': 'warn',
     'func-call-spacing': 'warn',
     'func-name-matching': 'warn',
