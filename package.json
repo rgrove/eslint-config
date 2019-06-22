@@ -1,6 +1,6 @@
 {
   "name": "@rgrove/eslint-config",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Ryan Grove's personal ESLint configs.",
   "keywords": [
     "eslint",
