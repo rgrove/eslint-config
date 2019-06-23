@@ -8,7 +8,8 @@ module.exports = {
   },
 
   plugins: [
-    'react'
+    'react',
+    'react-hooks'
   ],
 
   settings: {
@@ -53,5 +54,7 @@ module.exports = {
     'react/self-closing-comp': 'warn',
     'react/style-prop-object': 'warn',
     'react/void-dom-elements-no-children': 'warn',
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn'
   }
 };
