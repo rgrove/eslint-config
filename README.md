@@ -43,7 +43,8 @@ module.exports = {
 When extending multiple configs, always extend `@rgrove/eslint-config` first,
 since it defines baseline rules that other configs may override.
 
-See [the documentation for ESLint's `extends` property](https://eslint.org/docs/user-guide/configuring#extending-configuration-files) for more details.
+See [the documentation for ESLint's `extends` property](https://eslint.org/docs/user-guide/configuring#extending-configuration-files)
+for more details.
 
 ## Available Configs
 
