@@ -12,7 +12,6 @@ module.exports = {
   rules: {
     'import/default': 'warn',
     'import/export': 'warn',
-    'import/extensions': [ 'warn', 'always', { ignorePackages: true } ],
     'import/first': 'warn',
     'import/named': 'warn',
     'import/namespace': 'warn',
