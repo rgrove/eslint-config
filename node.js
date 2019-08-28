@@ -5,6 +5,10 @@ module.exports = {
     node: true
   },
 
+  parserOptions: {
+    ecmaVersion: 2020
+  },
+
   plugins: [
     'security'
   ],
