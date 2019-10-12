@@ -26,5 +26,6 @@ module.exports = {
     'import/order': [ 'warn', {
       groups: [ 'builtin', 'external' ]
     }],
+    'no-import-assign': 'error',
   }
 };

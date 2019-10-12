@@ -24,6 +24,7 @@ module.exports = {
     // errors at your own peril.
     'array-callback-return': 'warn',
     curly: [ 'warn', 'all' ],
+    'default-param-last': 'warn',
     eqeqeq: 'warn',
     'guard-for-in': 'warn',
     'no-alert': 'warn',
@@ -69,6 +70,7 @@ module.exports = {
     'no-useless-return': 'warn',
     'no-var': 'error',
     'prefer-promise-reject-errors': 'warn',
+    'prefer-regex-literals': 'warn',
     radix: [ 'warn', 'always' ],
     'require-await': 'warn',
     strict: 'warn',
