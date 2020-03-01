@@ -27,6 +27,7 @@ module.exports = {
     'react/jsx-key': 'warn',
     'react/jsx-no-comment-textnodes': 'warn',
     'react/jsx-no-duplicate-props': 'warn',
+    'react/jsx-no-script-url': 'error',
     'react/jsx-no-target-blank': 'warn',
     'react/jsx-no-useless-fragment': 'warn',
     'react/jsx-pascal-case': 'warn',
