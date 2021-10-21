@@ -2,33 +2,35 @@
 
 module.exports = {
   parserOptions: {
-    ecmaVersion: 2020,
+    ecmaVersion: 2021,
 
     ecmaFeatures: {
-      jsx: true
-    }
+      jsx: true,
+    },
   },
 
   plugins: [
     'react',
-    'react-hooks'
+    'react-hooks',
   ],
 
   settings: {
     react: {
-      version: 'detect'
-    }
+      linkComponents: ['Link'],
+      version: 'detect',
+    },
   },
 
   rules: {
-    'jsx-quotes': [ 'warn', 'prefer-double' ],
+    'jsx-quotes': ['warn', 'prefer-double'],
     'react/default-props-match-prop-types': 'warn',
     'react/jsx-curly-brace-presence': 'warn',
     'react/jsx-key': 'warn',
     'react/jsx-no-comment-textnodes': 'warn',
+    'react/jsx-no-constructed-context-values': 'warn',
     'react/jsx-no-duplicate-props': 'warn',
     'react/jsx-no-script-url': 'error',
-    'react/jsx-no-target-blank': 'warn',
+    'react/jsx-no-target-blank': ['warn', { warnOnSpreadAttributes: true }],
     'react/jsx-no-useless-fragment': 'warn',
     'react/jsx-pascal-case': 'warn',
     'react/jsx-props-no-multi-spaces': 'warn',
@@ -42,6 +44,7 @@ module.exports = {
     'react/no-direct-mutation-state': 'warn',
     'react/no-find-dom-node': 'warn',
     'react/no-is-mounted': 'error',
+    'react/no-namespace': 'error',
     'react/no-redundant-should-component-update': 'warn',
     'react/no-render-return-value': 'warn',
     'react/no-string-refs': 'warn',
@@ -50,15 +53,15 @@ module.exports = {
     'react/no-unescaped-entities': 'warn',
     'react/no-unknown-property': 'warn',
     'react/no-unsafe': 'warn',
+    'react/no-unstable-nested-components': ['warn', { allowAsProps: true }],
     'react/no-unused-state': 'warn',
     'react/no-will-update-set-state': 'error',
     'react/prefer-stateless-function': 'warn',
-    'react/react-in-jsx-scope': 'warn',
     'react/require-render-return': 'warn',
     'react/self-closing-comp': 'warn',
     'react/style-prop-object': 'warn',
     'react/void-dom-elements-no-children': 'warn',
     'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'warn'
-  }
+    'react-hooks/exhaustive-deps': 'warn',
+  },
 };

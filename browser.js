@@ -3,14 +3,19 @@
 module.exports = {
   env: {
     browser: true,
-    es6: true
+    es2021: true,
   },
 
   parserOptions: {
-    ecmaVersion: 2020
+    ecmaVersion: 2021,
   },
 
+  plugins: [
+    'import',
+  ],
+
   rules: {
-    'no-console': [ 'warn', { allow: [ 'warn', 'error' ] }]
-  }
+    'import/no-dynamic-require': 'warn',
+    'no-console': ['warn', { allow: ['warn', 'error'] }],
+  },
 };

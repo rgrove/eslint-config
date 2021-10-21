@@ -2,19 +2,11 @@
 
 module.exports = {
   env: {
-    commonjs: true
+    commonjs: true,
   },
 
   parserOptions: {
-    ecmaVersion: 2020,
-    sourceType: 'script'
+    ecmaVersion: 2021,
+    sourceType: 'script',
   },
-
-  plugins: [
-    'import'
-  ],
-
-  rules: {
-    'import/no-dynamic-require': 'warn',
-  }
 };

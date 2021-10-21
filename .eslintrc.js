@@ -4,6 +4,6 @@ module.exports = {
   extends: [
     './index.js',
     './commonjs.js',
-    './node.js'
-  ]
+    './node.js',
+  ],
 };

@@ -2,15 +2,15 @@
 
 module.exports = {
   env: {
-    node: true
+    node: true,
   },
 
   parserOptions: {
-    ecmaVersion: 2020
+    ecmaVersion: 2021,
   },
 
   plugins: [
-    'security'
+    'security',
   ],
 
   rules: {
@@ -18,5 +18,5 @@ module.exports = {
     'security/detect-buffer-noassert': 'warn',
     'security/detect-no-csrf-before-method-override': 'warn',
     'security/detect-pseudoRandomBytes': 'warn',
-  }
+  },
 };

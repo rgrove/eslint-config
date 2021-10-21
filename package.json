@@ -1,6 +1,6 @@
 {
   "name": "@rgrove/eslint-config",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Ryan Grove's personal ESLint configs.",
   "keywords": [
     "eslint",
@@ -18,18 +18,16 @@
     "url": "git+https://github.com/rgrove/eslint-config.git"
   },
   "main": "index.js",
-  "dependencies": {
-    "eslint-plugin-import": "^2.22.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-react": "^7.20.3",
-    "eslint-plugin-react-hooks": "^4.0.8",
-    "eslint-plugin-security": "^1.4.0"
-  },
   "devDependencies": {
-    "eslint": "^7.5.0"
+    "eslint": "^7.32.0"
   },
   "peerDependencies": {
-    "eslint": ">= 7.5.0"
+    "eslint-plugin-import": ">= 2.25.2",
+    "eslint-plugin-promise": ">= 5.1.0",
+    "eslint-plugin-react-hooks": ">= 4.2.0",
+    "eslint-plugin-react": ">= 7.26.1",
+    "eslint-plugin-security": ">= 1.4.0",
+    "eslint": ">= 7.32.0"
   },
   "scripts": {
     "lint": "eslint ."

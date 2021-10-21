@@ -4,18 +4,18 @@ module.exports = {
   extends: 'eslint:recommended',
 
   env: {
-    es6: true,
-    'shared-node-browser': true
+    es2021: true,
+    'shared-node-browser': true,
   },
 
   parserOptions: {
-    ecmaVersion: 2020
+    ecmaVersion: 2021,
   },
 
   plugins: [
     'import',
     'promise',
-    'security'
+    'security',
   ],
 
   rules: {
@@ -23,6 +23,7 @@ module.exports = {
     // overridden as necessary if you're smarter than the linter. Override
     // errors at your own peril.
     'array-callback-return': 'warn',
+    'comma-dangle': ['warn', 'always-multiline'],
     curly: [ 'warn', 'all' ],
     'default-param-last': 'warn',
     eqeqeq: 'warn',
@@ -65,9 +66,9 @@ module.exports = {
     'no-template-curly-in-string': 'warn',
     'no-undef-init': 'warn',
     'no-unmodified-loop-condition': 'warn',
-    'no-unused-expressions': 'warn',
+    'no-unused-expressions': ['warn', { enforceForJSX: true }],
     'no-unreachable-loop': 'warn',
-    'no-use-before-define': [ 'error', 'nofunc' ],
+    'no-use-before-define': ['error', 'nofunc'],
     'no-useless-call': 'warn',
     'no-useless-computed-key': 'warn',
     'no-useless-concat': 'warn',
@@ -78,21 +79,20 @@ module.exports = {
     'prefer-promise-reject-errors': 'warn',
     'prefer-regex-literals': 'warn',
     radix: [ 'warn', 'always' ],
-    'require-await': 'warn',
     strict: 'warn',
-    'unicode-bom': [ 'error', 'never' ],
-    'wrap-iife': [ 'warn', 'outside' ],
+    'unicode-bom': ['error', 'never'],
+    'wrap-iife': ['warn', 'outside'],
 
     // These rules loosely enforce some basic style. I try not to be too
     // prescriptive here, but these are things I care about because they help
     // reduce mistakes, improve consistency, and reduce the noisiness of diffs.
-    'brace-style': [ 'warn', '1tbs', { allowSingleLine: true } ],
+    'brace-style': ['warn', '1tbs', { allowSingleLine: true }],
     'eol-last': 'warn',
     'func-call-spacing': 'warn',
     'func-name-matching': 'warn',
-    'func-names': [ 'warn', 'as-needed' ],
-    'grouped-accessor-pairs': [ 'warn', 'getBeforeSet' ],
-    'linebreak-style': [ 'error', 'unix' ],
+    'func-names': ['warn', 'as-needed'],
+    'grouped-accessor-pairs': ['warn', 'getBeforeSet'],
+    'linebreak-style': ['error', 'unix'],
     'no-lonely-if': 'warn',
     'no-mixed-operators': 'warn',
     'no-tabs': 'warn',
@@ -100,16 +100,20 @@ module.exports = {
     'no-unneeded-ternary': 'warn',
     'prefer-rest-params': 'warn',
     'prefer-spread': 'warn',
-    semi: [ 'warn', 'always' ],
-    'semi-style': [ 'warn', 'last' ],
+    semi: ['warn', 'always'],
+    'semi-style': ['warn', 'last'],
 
     // These rules apply to both CommonJS and ES modules.
     'import/no-absolute-path': 'warn',
-    'import/no-unresolved': [ 'warn', { commonjs: true } ],
+    'import/no-import-module-exports': 'warn',
+    'import/no-unresolved': ['warn', {
+      caseSensitiveStrict: true,
+      commonjs: true,
+    }],
     'import/no-webpack-loader-syntax': 'warn',
     'import/no-self-import': 'error',
-    'import/no-useless-path-segments': [ 'warn', { noUselessIndex: true } ],
-    'import/no-extraneous-dependencies': [ 'warn', { peerDependencies: true } ],
+    'import/no-useless-path-segments': ['warn', { noUselessIndex: true }],
+    'import/no-extraneous-dependencies': ['warn', { peerDependencies: true }],
 
     // Rules related to promises.
     'promise/no-nesting': 'warn',
@@ -120,6 +124,6 @@ module.exports = {
     'promise/valid-params': 'error',
 
     // Security-related rules.
-    'security/detect-unsafe-regex': 'warn'
-  }
+    'security/detect-unsafe-regex': 'warn',
+  },
 };

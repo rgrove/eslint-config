@@ -2,12 +2,12 @@
 
 module.exports = {
   parserOptions: {
-    ecmaVersion: 2020,
-    sourceType: 'module'
+    ecmaVersion: 2021,
+    sourceType: 'module',
   },
 
   plugins: [
-    'import'
+    'import',
   ],
 
   rules: {
@@ -23,9 +23,9 @@ module.exports = {
     'import/no-named-as-default-member': 'warn',
     'import/no-named-as-default': 'warn',
     'import/no-named-default': 'warn',
-    'import/order': [ 'warn', {
-      groups: [ 'builtin', 'external' ]
+    'import/order': ['warn', {
+      groups: ['builtin', 'external'],
     }],
     'no-import-assign': 'error',
-  }
+  },
 };
