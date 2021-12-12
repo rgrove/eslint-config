@@ -43,7 +43,6 @@ module.exports = {
     'no-floating-decimal': 'warn',
     'no-implicit-coercion': 'warn',
     'no-implied-eval': 'warn',
-    'no-invalid-this': 'warn',
     'no-iterator': 'error',
     'no-label-var': 'warn',
     'no-lone-blocks': 'warn',
