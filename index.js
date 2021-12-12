@@ -23,7 +23,6 @@ module.exports = {
     // overridden as necessary if you're smarter than the linter. Override
     // errors at your own peril.
     'array-callback-return': 'warn',
-    'comma-dangle': ['warn', 'always-multiline'],
     curly: [ 'warn', 'all' ],
     'default-param-last': 'warn',
     eqeqeq: 'warn',
@@ -86,6 +85,7 @@ module.exports = {
     // prescriptive here, but these are things I care about because they help
     // reduce mistakes, improve consistency, and reduce the noisiness of diffs.
     'brace-style': ['warn', '1tbs', { allowSingleLine: true }],
+    'comma-dangle': ['warn', 'always-multiline'],
     'eol-last': 'warn',
     'func-call-spacing': 'warn',
     'func-name-matching': 'warn',
