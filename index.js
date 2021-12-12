@@ -14,7 +14,7 @@ module.exports = {
 
   plugins: [
     'import',
-    'promise',
+    // 'promise',
     'security',
   ],
 
@@ -115,12 +115,12 @@ module.exports = {
     'import/no-extraneous-dependencies': ['warn', { peerDependencies: true }],
 
     // Rules related to promises.
-    'promise/no-nesting': 'warn',
-    'promise/no-new-statics': 'error',
-    'promise/no-return-wrap': 'warn',
-    'promise/param-names': 'warn',
-    'promise/prefer-await-to-then': 'warn',
-    'promise/valid-params': 'error',
+    // 'promise/no-nesting': 'warn',
+    // 'promise/no-new-statics': 'error',
+    // 'promise/no-return-wrap': 'warn',
+    // 'promise/param-names': 'warn',
+    // 'promise/prefer-await-to-then': 'warn',
+    // 'promise/valid-params': 'error',
 
     // Security-related rules.
     'security/detect-unsafe-regex': 'warn',
