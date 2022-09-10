@@ -118,8 +118,14 @@ module.exports = {
     'prefer-spread': 'warn',
     semi: ['warn', 'always'],
     'semi-style': ['warn', 'last'],
+    'sort-imports': ['warn', {
+      allowSeparatedGroups: true,
+      ignoreCase: true,
+      ignoreDeclarationSort: true, // handled by `eslint-plugin-import`
+    }],
 
     // These rules apply to both CommonJS and ES modules.
+    'import/newline-after-import': 'warn',
     'import/no-absolute-path': 'warn',
     'import/no-import-module-exports': 'warn',
     'import/no-unresolved': ['warn', {
@@ -130,6 +136,20 @@ module.exports = {
     'import/no-self-import': 'error',
     'import/no-useless-path-segments': ['warn', { noUselessIndex: true }],
     'import/no-extraneous-dependencies': ['warn', { peerDependencies: true }],
+    'import/order': ['warn', {
+      alphabetize: {
+        caseInsensitive: true,
+        order: 'asc',
+      },
+      groups: [
+        'builtin',
+        'external',
+        'internal',
+        ['parent', 'sibling', 'index'],
+        'type',
+      ],
+      'newlines-between': 'always',
+    }],
 
     // JSDoc rules
     'jsdoc/check-alignment': 'warn',

@@ -23,9 +23,6 @@ module.exports = {
     'import/no-named-as-default-member': 'warn',
     'import/no-named-as-default': 'warn',
     'import/no-named-default': 'warn',
-    'import/order': ['warn', {
-      groups: ['builtin', 'external'],
-    }],
     'no-import-assign': 'error',
   },
 };
