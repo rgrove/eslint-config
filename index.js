@@ -14,9 +14,26 @@ module.exports = {
 
   plugins: [
     'import',
+    'jsdoc',
     // 'promise',
     'security',
   ],
+
+  settings: {
+    'import/ignore': [
+      '\\.css$',
+    ],
+
+    jsdoc: {
+      mode: 'typescript',
+      tagNamePreference: {
+        extends: 'extends',
+        prop: 'prop',
+        property: 'property',
+        return: 'returns',
+      },
+    },
+  },
 
   rules: {
     // These rules help catch errors or possible mistakes. Warnings can be
@@ -113,6 +130,31 @@ module.exports = {
     'import/no-self-import': 'error',
     'import/no-useless-path-segments': ['warn', { noUselessIndex: true }],
     'import/no-extraneous-dependencies': ['warn', { peerDependencies: true }],
+
+    // JSDoc rules
+    'jsdoc/check-alignment': 'warn',
+    'jsdoc/check-param-names': 'warn',
+    'jsdoc/check-property-names': 'warn',
+    'jsdoc/check-syntax': 'warn',
+    'jsdoc/check-tag-names': ['warn', {
+      definedTags: [
+        'jest-environment',
+      ],
+    }],
+    'jsdoc/check-types': 'warn',
+    'jsdoc/check-values': 'warn',
+    'jsdoc/empty-tags': 'warn',
+    'jsdoc/implements-on-classes': 'warn',
+    'jsdoc/multiline-blocks': 'warn',
+    'jsdoc/no-bad-blocks': ['warn', {
+      preventAllMultiAsteriskBlocks: true,
+    }],
+    'jsdoc/no-multi-asterisks': ['warn', {
+      allowWhitespace: true,
+    }],
+    'jsdoc/require-asterisk-prefix': 'warn',
+    'jsdoc/require-hyphen-before-param-description': ['warn', 'never'],
+    'jsdoc/require-property-name': 'warn',
 
     // Rules related to promises.
     // 'promise/no-nesting': 'warn',
