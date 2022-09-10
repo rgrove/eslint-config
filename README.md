@@ -76,6 +76,10 @@ Defines parser options and rules specific to modern Node.js.
 
 Defines parser options and rules specific to React.
 
+### @rgrove/eslint-config/typescript
+
+Defines parser options and rules specific to TypeScript.
+
 ## Using an alternative parser
 
 These configs use ESLint's default parser. If you're using (for example) Babel
