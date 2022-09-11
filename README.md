@@ -6,13 +6,21 @@ You're welcome to extend my configs and use them for your own projects, but be w
 
 Please don't ask me to change these configs to suit your preferences. Just override them in your own configs, or don't use them.
 
-## Usage
+## Installation
 
-First, install the npm module:
+### npm
 
 ```sh
 npm i --save-dev @rgrove/eslint-config
 ```
+
+### pnpm
+
+```sh
+pnpm add --save-dev --config.auto-install-peers=true @rgrove/eslint-config
+```
+
+## Usage
 
 To use the primary config, add an `extends` property to your `.eslintrc.js` (or wherever you've chosen to configure ESLint), like this:
 
