@@ -17,6 +17,10 @@
     "type": "git",
     "url": "git+https://github.com/rgrove/eslint-config.git"
   },
+  "files": [
+    "*.js",
+    "!.*"
+  ],
   "main": "index.js",
   "devDependencies": {
     "eslint": ">= 8.4.1",
